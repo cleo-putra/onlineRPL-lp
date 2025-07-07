@@ -1,0 +1,144 @@
+.testimonial-section-4{
+    &.app-testimonial-section{
+        padding: 112px 0px 65px 0px;
+        &::before{
+            display: none;
+        }
+        .testimonial-btns{
+            max-width: 530px;
+            min-height: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            a{
+                padding: 16px 50px;
+                background: color(whiteColor);
+                border-radius: 45px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                h4{
+                    margin-left: 18px;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    flex-direction: column;
+                    margin-bottom: 0px;
+                    span{
+                        font-weight: 500;
+                        font-size: 15px;
+                        color: color(textColor);
+                    }
+                }
+            }
+        }
+    }
+}
+.app-testimonial-section-slider {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+    position: relative;
+    cursor: grab;
+
+    &::before {
+        position: absolute;
+        z-index: 1;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 20%;
+        height: 100%;
+        background: linear-gradient(90deg, #d3e1ff 0%, rgba(211, 225, 255, 0) 100%);
+    }
+
+    &::after {
+        position: absolute;
+        z-index: 1;
+        content: "";
+        top: 0;
+        right: 0;
+        width: 20%;
+        height: 100%;
+        background: linear-gradient(90deg, rgba(255, 234, 239, 0) 0%, #ffeaef 100%);
+    }
+
+    .slider-item {
+        flex: 0 0 auto;
+        background-color: color(whiteColor);
+        border-radius: 30px;
+        padding: 20px 30px;
+        h4 {
+            font-size: 15px;
+            line-height: 24px;
+            font-family: fontfamily(dmSans);
+        }
+        h5 {
+            font-size: 13px;
+            line-height: 24px;
+            color: color(textColor);
+            font-family: fontfamily(dmSans);
+        }
+        p{
+            font-size: 15px;
+            line-height: 30px;
+            color: color(textColor);
+        }
+
+        .slider-info {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .slider-reating{
+                cursor: pointer;
+                background: rgba(0, 0, 0, 0.08);
+                border-radius: 18px;
+                padding: 2.5px 13.5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img{
+                    padding-right: 9px;
+                }
+            }
+        }
+    }
+    
+    .slick-dots{
+        position: relative;
+        bottom: 0px;
+        max-width: 107px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        margin-top: 60px;
+        gap: 6px;
+        li{
+            height: 8px;
+            width: 8px;
+            padding: 0px;
+            button{
+                background: rgba(0, 0, 0, 0.2);
+                height: 8px;
+                width: 8px;
+                border-radius: 50%;
+                opacity: 1;
+                color: transparent;
+                &:before{
+                    display: none;
+                }
+            }
+            &.slick-active{
+                width: 15px;
+                button{
+                    width: 15px;
+                    border-radius: 20px;
+                    background: color(title);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,174 @@
+.creators-details-section{
+    padding-bottom: 60px;
+}
+.creators-details-content{
+    padding-top: 131px;
+}
+.creators-details-tab-btns{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    button{
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        padding: 0px 0px 12px 0px;
+        text-transform: uppercase;
+        border-bottom: 2px solid transparent;
+        transition: 0.3s;
+        &.active,
+        &:hover{
+            color: color(title);
+            border-bottom: 2px solid #4157FF;
+        }
+    }
+}
+
+
+/*-- creator-profile-section --*/
+.creator-profile-section{
+    max-width: 300px;
+    width: 100%;
+    margin-top: -236px;
+
+    .creator-profile-img{
+        min-height: 210px;
+        max-height: 210px;
+        min-width: 210px;
+        max-width: 210px;
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+        background: #F9F9F9;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 23px;
+        padding: 15px;
+        img{
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+        }
+    }
+    .creator-profile-text{
+        h2{
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 36px;
+            margin-bottom: 0px;
+        }
+        .creator-username {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            color: color(iconColor);
+            margin-bottom: 25px;
+        }
+        .wallet-address{
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+            font-family: fontfamily(firaCode);
+            color: color(title);
+            margin-bottom: 28px;
+            span{
+                margin-left: 10px;
+                cursor: pointer;
+            }
+        }
+        h6{
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+            margin-bottom: 8px;
+            color: color(blackColor);
+            text-transform: uppercase;
+        }
+        .creator-pragrph{
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 26px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-bottom: 7px;
+        }
+
+        .follow-btn{
+            background: #5F5FFF;
+            border-radius: 30px;
+            padding: 15.5px;
+            width: 100%;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 24px;
+            color: color(whiteColor);
+        }
+
+        .social-links{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 243px;
+            width: 100%;
+            padding: 0px;
+            list-style: none;
+            li{
+                transition: 0.3;
+                a{
+                    transition: 0.3;
+                    i {
+                            font-family: 'Font Awesome 5 Brands';
+                            font-weight: 400;
+                            font-size: 18px;
+                            line-height: 28px;
+                            color: color(iconColor);
+                            transition: 0.3;
+                        }
+                }
+                &:hover{
+                    a{
+                        i{
+                            color: #5F5FFF;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+
+body.dark-scheme,
+html.dark-scheme body{
+    .creator-profile-section {
+        .creator-profile-text {
+            .wallet-address{
+                color: color(iconColor);
+            }
+            h6{
+                color: color(whiteColor);
+            }
+        }
+    }
+    .creator-profile-section {
+        .creator-profile-img{
+            background: #181D22;
+        }
+    }
+    .creators-details-tab-btns {
+        border-bottom: 1px solid #FFFFFF10;
+        button {
+            &.active,
+            &:hover {
+                color: color(whiteColor);
+            }
+        }
+    }
+}

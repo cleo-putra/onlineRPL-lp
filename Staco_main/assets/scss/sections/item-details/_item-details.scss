@@ -1,0 +1,341 @@
+.item-details-section{
+    padding-top: 120px;
+    padding-bottom: 103px;
+}
+.item-details-img{
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+}
+.item-details-info{
+    &.left{
+        padding-right: 40px;
+    }
+    &.right{
+        padding-left: 40px;
+    }
+    .item-details-header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        .item-categories{
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+            color: color(title);
+            margin-bottom: 0px;
+        }
+        .item-details-header-right{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 30px;
+            button{
+                transition: 0.3s;
+                &:hover{
+                    filter: brightness(0);
+                }
+            }
+        }
+    }
+    .item-title {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 36px;
+        margin-bottom: 30px;
+    }
+    .stock-info{
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        color: color(iconColor);
+        max-width: 389px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 39px;
+    }
+    .nft-people-section{
+        padding: 10px 0px;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        margin-bottom: 36px;
+    }
+    
+    .item-details-price-section{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 36px;
+        .item-details-price{
+            width: 48%;
+            p {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 20px;
+                text-transform: uppercase;
+                color: color(iconCplor);
+                span{
+                    text-transform: none;
+                    color: color(title);
+                }
+            }
+            h5 {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 20px;
+                text-transform: uppercase;
+            }
+        }
+    }
+    .item-details-btns{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        button{
+            width: 48%;
+            padding: 17.5px 50px
+        }
+        .item-details-timer{
+            width: 48%;
+            background: linear-gradient(90deg, rgba(95, 95, 255, 0.15) 0%, rgba(252, 95, 255, 0.15) 100%);
+            border-radius: 30px;
+            padding: 17.5px 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 20px;
+            color: #111111;
+            p{
+                margin-bottom: 0px;
+            }
+            ul{
+                padding: 0px;
+                list-style: none;
+                margin-bottom: 0px;;
+                align-items: center;
+                display: flex;
+                justify-content: flex-end;
+                gap: 12px;
+                li{}
+            }
+        }
+    }
+    .item-details-note{
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 20px;
+        color: color(iconColor);
+        margin-top: 10px;
+        margin-bottom: 29px;
+    }
+}
+
+.item-details-tab-section{
+    .item-details-tab-btns{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 30px;
+        list-style: none;
+        padding: 0px;
+        margin-bottom: 0px;
+        width: 100%;
+        border-bottom: 1px solid #E5E5E5;
+        li {
+            padding-bottom: 10px;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 20px;
+            text-transform: uppercase;
+            color: color(iconColor);
+            border-bottom: 2px solid transparent;
+            transition: 0.3s;
+            cursor: pointer;
+            &.active,
+            &:hover{
+                color: color(title);
+                border-bottom: 2px solid #4157FF;
+            }
+        }
+    }
+}
+
+.item-details-table-section{
+    overflow-x: scroll;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
+.item-details-table{
+    padding-top: 30px;
+    min-width: 520px;
+    table{
+        width: 100%;
+        tr{
+            td{
+                padding-bottom: 25px;
+                vertical-align: bottom;
+                .table-text{
+                    color: color(title);
+                    margin-bottom: 0px;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 20px;
+                    span{
+                        color: color(iconColor);
+                    }
+                }
+                &:nth-last-child(1){
+                    text-align: right;
+                }
+            }
+        }
+    }
+}
+
+.item-details-table-people{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 14px;
+    .people-img{
+        min-height: 40px;
+        min-width: 40px;
+        max-height: 40px;
+        max-width: 40px;
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+        img{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .people-text{
+        p{
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 20px;
+            text-transform: uppercase;
+            color: color(iconColor);
+            margin-bottom: 0px;
+        }
+        h6{
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 0px;
+            img{
+                margin-left: 7px;
+            }
+        }
+    }
+}
+
+.item-details-driscption-list{
+    ul{
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+        max-width: 121px;
+        width: 100%;
+        margin-top: 17px;
+        margin-bottom: 9px;
+        li{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            span{
+                line-height: 36px;
+                color: color(textColor);
+                &:nth-child(1){
+                    text-transform: uppercase;
+                    min-width: 113px;
+                }
+            }
+        }
+    }
+    p{
+        max-width: 649px;
+        width: 100%;
+    }
+}
+
+
+body.dark-scheme,
+html.dark-scheme body{
+    .item-details-info {
+        .item-details-price-section {
+            .item-details-price p span{
+                color: color(whiteColor);
+            }
+        }
+    }
+    .item-details-info {
+        .item-details-header {
+            .item-categories{
+                color: color(whiteColor);
+            }
+        }
+        .item-details-btns {
+            .item-details-timer{
+                color: color(whiteColor);
+            }
+        }
+    }
+    .item-details-tab-section {
+        .item-details-tab-btns {
+            border-color: #ffffff20;
+            li{
+                &.active,
+                &:hover{
+                    color: color(whiteColor);
+                }
+            }
+        }
+    }
+    .item-details-info {
+        .nft-people-section{
+            border-color: #ffffff20;
+        }
+    }
+    .item-details-table {
+        table {
+            tr {
+                td {
+                    .table-text{
+                        color: color(whiteColor);
+                    }
+                }
+            }
+        }
+    }
+    
+    .item-details-driscption-list {
+        ul {
+            li {
+                span{
+                    color: color(iconColor);
+                }
+            }
+        }
+        p{
+            color: color(iconColor);
+        }
+    }
+    
+    .item-details-buy-now-btn{
+        span{
+            color: color(whiteColor);
+        }
+    }
+}

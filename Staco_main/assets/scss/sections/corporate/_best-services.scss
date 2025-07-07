@@ -1,0 +1,120 @@
+.best-services-section{
+    background: #EEF2F5;
+    .overlay{
+        padding: 140px 0px;
+        background: url(../images/corporate/map.svg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .slick-prev{
+        left: -284px;
+        top: 330px;
+        background: transparent;
+        border: 2px solid rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+        overflow: hidden;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &::before{
+            content: url(../images/corporate/icon-prev.svg);
+            filter: brightness(0);
+            opacity: 20%;
+        }
+        &:hover{
+            border: 2px solid #5ECC62;
+            &::before{
+                filter: none;
+                opacity: 100%;
+            }
+        }
+    }
+    .slick-next{
+        left: -214px;
+        top: 330px;
+        background: transparent;
+        border: 2px solid rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+        overflow: hidden;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &::before{
+            content: url(../images/corporate/icon-next.svg);
+            filter: brightness(0);
+            opacity: 20%;
+        }
+        &:hover{
+            border: 2px solid #5ECC62;
+            &::before{
+                filter: none;
+                opacity: 100%;
+            }
+        }
+    }
+}
+//.corporate-body{
+//    .parallax-mirror{
+//        z-index: 1 !important;
+//    }
+//}
+
+.best-services-left{
+    p{
+        max-width: 271px;
+        width: 100%;
+    }
+}
+
+.best-services-card{
+    background: #FFFFFF;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    transition: 0.3s;
+    &::before{
+        content: url(../images/corporate/card-footer-icon1.svg);
+        position: absolute;
+        bottom: -11px;
+        right: 0px;
+        filter: brightness(0);
+        opacity: 15%;
+        transition: 0.3s;
+    }
+    &::after{
+        content: url(../images/corporate/card-footer-icon2.svg);
+        position: absolute;
+        bottom: -11px;
+        right: 0px;
+    }
+    &:hover{
+        &::before{
+            filter: none;
+            opacity: 100%;
+        }
+    }
+}
+.best-services-img{
+    img{
+        width: 100%;
+    }
+}
+.best-services-text{
+    padding: 24px 30px 30px 30px;
+    h5{
+        margin-bottom: 10px;
+    }
+    p{
+        margin-bottom: 0px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+    }
+}

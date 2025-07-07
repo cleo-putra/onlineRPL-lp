@@ -1,0 +1,111 @@
+.community-section{
+//    margin-bottom: 140px;
+    position: relative;
+    img{
+        &.obj-left{
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+        }
+        &.obj-right{
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+        }
+    }
+}
+.community-content{
+    text-align: center;
+    .community-img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #FFFFFF;
+        border: 2px solid rgba(0, 0, 0, 0.1);
+        height: 100px;
+        width: 100px;
+        margin: auto;
+        margin-bottom: 40px;
+        border-radius: 50%;
+    }
+    h2{
+        font-size: 700;
+        margin-bottom: 50px;
+    }
+    
+    form{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 470px;
+        padding: 10px;
+        background: #FFFFFF;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 35px;
+        margin: auto;
+        margin-bottom: 36px;
+        input{
+            border: none;
+            outline: none;
+            max-width: 100%;
+            overflow: hidden;
+            &[type=text] {
+                background: transparent;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 26px;
+                color: #111111;
+                padding: 7px 13px;
+
+                &::placeholder {
+                    /* Chrome, Firefox, Opera, Safari 10.1+ */
+                    color: color(title);
+                }
+
+                &:-ms-input-placeholder {
+                    /* Internet Explorer 10-11 */
+                    color: color(title);
+                }
+
+                &::-ms-input-placeholder {
+                    /* Microsoft Edge */
+                    color: color(title);
+                }
+            }
+            &[type=submit]{
+                background: #0555FF;
+                border-radius: 25px;
+                font-weight: 700;
+                font-size: 15px;
+                line-height: 26px;
+                text-align: center;
+                color: #FFFFFF;
+                height: 50px;
+                width: 140px;
+            }
+        }
+    }
+    
+    ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style: url(../images/icons/list-check.svg);
+        li{
+            color: color(title);
+            font-size: 500;
+            margin-right: 50px;
+            &:nth-last-child(1){
+                margin-right: 0px;
+            }
+        }
+    }
+    
+}
+
+.sass-testimonial-seciton{
+    .testimonial-card{
+        background-color: #041527;
+    }
+}

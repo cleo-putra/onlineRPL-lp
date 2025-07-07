@@ -1,0 +1,43 @@
+.partners-logos{
+    position: relative;
+    overflow: hidden;
+    &::before{
+        content: '';
+        height: 100%;
+        width: 20%;
+        background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        z-index: 11;
+    }
+    &::after{
+        content: '';
+        height: 100%;
+        width: 20%;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        z-index: 11;
+    }
+}
+.our-partners-list{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+    .item{
+        margin-right: 30px;
+        height: 90px;
+        min-width: 226px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(90deg, #F1F1F1 0%, #FFFFFF 49.48%, #F1F1F1 100%);
+        border-radius: 20px;
+        img{
+            width: 60%;
+        }
+    }
+}

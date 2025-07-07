@@ -1,0 +1,266 @@
+.crypto-token-body{
+    background: #0D1014;
+    min-height: 100vh;
+//    overflow-x: hidden;
+}
+
+.crypto-token-banner{
+    .crypto-token-banner-shape{
+        position: absolute;
+        top: 15px;
+        left: 0px;
+        width: 100%;
+        z-index: 0;
+        .ractangle{
+            background: linear-gradient(90deg, rgba(208, 46, 190, 0.3) 0%, rgba(108, 211, 108, 0.3) 100%);
+            width: 100%;
+            height: 60px;
+            margin-bottom: 20px;
+        }
+    }
+}
+.crypto-token-banner-inner {
+    background: url(../images/crypto-token/crypto-token-bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+
+    .overlay {
+        background: url(../images/crypto-token/grain-texture.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        padding-top: 251px;
+        padding-bottom: 91px;
+        height: 100%;
+        .container{
+            position: relative;
+        }
+        .masd-grad{
+            position: absolute;
+            right: -158px;
+            top: -100px;
+        }
+    }
+    .bottom-overlay{
+        height: 50%;
+        width: 100%;
+        bottom: 0px;
+        position: absolute;
+        background: linear-gradient(180deg, rgba(13, 16, 20, 0) 0%, rgba(13, 16, 20, 0.762195) 65.1%, #0D1014 85.42%);
+    }
+}
+
+.crypto-token-banner-text{
+    margin-bottom: 120px;
+    position: relative;
+    z-index: 1;
+    h1{
+        font-size: 100px;
+        line-height: 120%;
+        color: color(whiteColor);
+        margin-bottom: 45px;
+        text-transform: uppercase;
+    }
+    p{
+        font-size: 18px;
+        line-height: 200%;
+        color: color(whiteColor);
+        max-width: 650px;
+        margin-bottom: 58px;
+    }
+}
+
+.crypto-token-banner-ball{
+    position: relative;
+    position: absolute;
+    right: 0px;
+    top: -91px;
+    z-index: 0;
+    img{
+        animation: rotate360 8s linear infinite;
+        -webkit-animation: rotate360 8s linear infinite;
+    }
+}
+
+
+/*-- crypto banner card --*/
+.crypto-banner-card{
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    padding: 25px 40px;
+    h2{
+        font-size: 40px;
+        max-height: 70px;
+        min-height: 70px;
+        padding: 5px 0px;
+        line-height: 140%;
+        color: color(whiteColor);
+        margin-bottom: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 15px 0px;
+    }
+    p{
+        font-size: 18px;
+        line-height: 100px;
+        text-transform: uppercase;
+        color: color(whiteColor);
+        margin-bottom: 0px;
+        position: relative;
+        width: max-content;
+        &::after{
+            content: '';
+            height: 11px;
+            width: 11px;
+            background: #BFFF0A;
+            border-radius: 50%;
+            position: absolute;
+            right: -20px;
+            top: 45px;
+        }
+    }
+}
+
+.crypto-banner-card2{
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    padding: 25px 38px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    h2{
+        font-size: 40px;
+        line-height: 60px;
+        color: color(whiteColor);
+        margin-bottom: 0px;
+    }
+    p{
+        font-size: 18px;
+        text-transform: uppercase;
+        color: color(whiteColor);;
+        margin-bottom: 0px;
+        line-height: 60px;
+        position: relative;
+        width: max-content;
+        padding-left: 25px;
+        &::before{
+            content: '';
+            height: 11px;
+            width: 11px;
+            background: #BFFF0A;
+            border-radius: 50%;
+            position: absolute;
+            left: 0px;
+            top: 25px;
+        }
+    }
+}
+
+.number-diy{
+    display: flex;
+    .data{
+        font-size: 40px !important;
+        line-height: auto;
+        color: #ffffff !important;
+        margin-bottom: 0px;
+        div{
+            width: 30px !important;
+            padding: 0px !important;
+            span{
+                width: 30px !important;
+                padding: 0px !important;
+                height: auto !important;
+            }
+        }
+    }
+}
+/*-- banner-video-section start --*/
+
+@-webkit-keyframes circle {
+    from {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    
+    to {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+@keyframes circle {
+    from {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    
+    to {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+
+.banner-video-section{
+    padding-top: 50px;
+}
+.banner-video-card{
+    height: 550px;
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    video{
+        position: absolute;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        border-radius: 30px;        
+    }
+    h2{
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        color: color(whiteColor);
+        margin-bottom: 0px;
+        font-size: 70px;
+        text-transform: uppercase;
+        line-height: 117%;
+        &.cd-headline{
+            span{
+                padding: 0px !important;
+            }
+        }
+        .cd-words-wrapper {
+            width: 577px !important;
+            text-align: center;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            margin: auto;
+            b {
+                font-weight: 700;
+                width: 577px !important;
+                text-align: center;
+                justify-content: center;
+                display: flex;
+                align-items: center;
+                margin: auto;
+            }
+        }
+    }
+}
+/*-- banner-video-section End --*/

@@ -1,0 +1,133 @@
+.crypto-tokenomics-section{
+    padding-top: 140px;
+}
+.tokenomics-card{
+    position: relative;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 30px;
+    .overlay{
+        background: url(../images/crypto-token/grain-texture.png);
+        height: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 121px 100px 136px 100px;
+        .shape{
+            position: absolute;
+            top: 0px;
+            left: 15%;
+            z-index: 0;
+        }
+    }
+}
+.tokenomics-content{
+    position: relative;
+    z-index: 2;
+    h2{
+        font-family: fontfamily(quantico);
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 80px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-bottom: 51px;
+    }
+}
+
+.tokenomics-progress-section{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 5px;
+     
+    .tokenomics-progress{
+        .tokenomics-progress-bg{
+            height: 60px;
+            overflow: hidden;
+            margin-bottom: 26px;
+        }
+        .tokenomics-progress-text{
+            h3{
+                font-family: fontfamily(quantico);
+                line-height: 100%;
+                text-transform: uppercase;
+                color: color(whiteColor);
+                margin-bottom: 0px;
+            }
+            p{
+                text-transform: uppercase;
+                color: color(whiteColor);
+                margin-bottom: 0px;
+            }
+        }
+        &.community {
+            width: 46%;
+            .tokenomics-progress-bg {
+                background: #BFFF0A;
+                opacity: 0.8;
+                border-radius: 30px 0px 0px 30px;
+            }
+        }
+        &.team {
+            width: 34%;
+            .tokenomics-progress-bg {
+                background: #FF7BCA;
+                opacity: 0.8;
+                border-radius: 0px;
+            }
+        }
+        &.investor {
+            width: 12%;
+            .tokenomics-progress-bg {
+                background: #ADFFEB;
+                opacity: 0.8;
+                border-radius: 0px;
+            }
+        }
+        &.advisors {
+            width: 8%;
+            .tokenomics-progress-bg {
+                background: #ADE5FF;
+                opacity: 0.8;
+                border-radius: 0px 30px 30px 0px;
+            }
+        }
+    }
+}
+
+/*-- tokenomics-list section start --*/
+.tokenomics-list{
+    ul{
+        padding: 0px;
+        margin: 0px;
+        list-style: none;
+        li{
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+            span{
+                font-weight: 700;
+                line-height: 167%;
+                color: rgba(255, 255, 255, 0.8);
+                text-transform: uppercase;
+            }
+            h5{
+                font-family: fontfamily(quantico);
+                font-weight: 700;
+                text-transform: uppercase;
+                line-height: 167%;
+                color: color(whiteColor);
+                margin-bottom: 0px;
+                span{
+                    color: #BFFE0B;
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+}

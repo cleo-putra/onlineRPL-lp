@@ -1,0 +1,29 @@
+.cross-platform-section{
+    background: url(../images/crypto/cross-platform-bg.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 174px 0px;
+}
+.cross-platform-card{
+    max-width: 525px;
+    width: 100%;
+    margin: auto;
+    background: #1C232D;
+    border-radius: 20px;
+    padding: 96px 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    .section-title{
+        position: relative;
+        z-index: 2;
+        margin-bottom: 0px;
+    }
+    .cross-platform-mesh-grad{
+        position: absolute;
+        z-index: 0;
+    }
+}

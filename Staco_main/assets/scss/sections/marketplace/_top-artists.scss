@@ -1,0 +1,200 @@
+.top-artists-section {
+    padding-bottom: 73px;
+}
+
+.top-artists-content{
+    margin-top: -82px;
+    .top-artists-time{
+        max-width: 242px;
+        width: 100%;
+        margin-left: auto;
+        margin-bottom: 35px;
+        .gridFilter{
+            width: 100%;
+            background: #FFFFFF;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            list-style: none;
+            padding: 6px 13px;
+            margin-bottom: 0px;
+            button{
+                padding: 5.5px 7px;
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 22px;
+                color: color(iconColor);
+                border-radius: 20px;
+                min-width: 33px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: 0.3s;
+                &.active,
+                &:hover{
+                    transition: 0.3s;
+                    background: rgba(95, 95, 255, 0.15);
+                    color: #5F5FFF;
+                }
+            }
+        }
+    }
+}
+
+.top-artists-list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 0px -15px;
+    padding: 0px;
+    list-style: none;
+
+    li {
+        width: 20%;
+        padding: 0px 15px;
+        margin-bottom: 30px;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            width: 85%;
+            height: 100%;
+            top: 0px;
+            left: 7.5%;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 15px;
+            background: color(whiteColor);
+            z-index: 2;
+            transition: 0.3s;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            width: 80%;
+            height: 100%;
+            top: 0px;
+            left: 10%;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 15px;
+            background: color(whiteColor);
+            z-index: 1;
+            transition: 0.5s;
+        }
+        &:hover{
+            &::after{
+                top: 5px;
+            }
+            &::before{
+                top: 10px;
+            }
+        }
+    }
+
+    .top-artists-card {
+        background: color(whiteColor);
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        border-radius: 15px;
+        padding: 15px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 15px;
+        width: 100%;
+        position: relative;
+        z-index: 3;
+        
+        .top-artists-img{
+            min-height: 50px;
+            min-width: 50px;
+            max-height: 50px;
+            max-width: 50px;
+            overflow: hidden;
+            border-radius: 50%;
+            img{
+                height: 100%;
+                width: 100%;
+            }
+        }
+        
+        p {
+            margin-bottom: 0px;
+        }
+        .artists-name {
+            font-size: 14px;
+            line-height: 22px;
+            font-weight: 700;
+            color: color(title);
+            span {
+                margin-left: 7px;
+            }
+        }
+        .artists-value {
+            font-size: 12px;
+            line-height: 22px;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+        .no {
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 22px;
+            color: color(iconColor);
+        }
+        &:hover{
+            .no{
+                color: #5F5FFF;
+            }
+        }
+    }
+}
+
+/*-- Dark Mood --*/
+body.dark-scheme,
+html.dark-scheme body{
+    .top-artists-list{
+        li{
+            &::after,
+            &::before{
+                background: #181D22;
+                border: 1px solid rgba(255, 255, 255, 0.05);
+            }
+        }
+        .top-artists-card{
+            background: #181D22;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            .artists-name{
+                color: color(whiteColor);
+            }
+            .artists-value{
+                color: #FFFFFF80;
+            }
+        }
+    }
+    .top-artists-content{
+        .top-artists-time{
+            ul{
+                background: #181D22;
+            }
+        }
+    }
+    .top-artists-content{
+        .top-artists-time{
+            .gridFilter{
+                background: #181D22;
+                border: 1px solid rgba(255, 255, 255, 0.05);
+                button{
+                    color: color(whiteColor);
+                    opacity: 0.8;
+                    &.active,
+                    &:hover{
+                        color: #5F5FFF;
+                    }
+                }
+            }
+        }
+    }
+}

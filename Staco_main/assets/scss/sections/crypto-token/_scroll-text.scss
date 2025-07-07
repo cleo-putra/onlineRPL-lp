@@ -1,0 +1,128 @@
+.scroll-text-section{
+    background: url(../images/crypto-token/dotted-bg.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 54px 0px;
+    overflow: hidden;
+}
+.scroll-text-inner{
+    ul{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+        li{
+            margin-right: 38px;
+            font-family: fontfamily(quantico);
+            line-height: 100%;
+            font-size: 100px;
+            font-weight: 700;
+            color: color(whiteColor);
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+
+
+.splitting {
+//  color: saturate(lighten(#182952,55%),60%);
+  .char {
+    transition: transform .5s cubic-bezier(.3, 0, .3, 1), opacity .5s linear;
+    transition-delay: calc( 30ms * var(--char-index) );
+
+  }
+
+  &[data-scroll="out"] .char {
+    opacity: 0.1;
+    transform: translateY( .25em );
+  }
+}
+.splitting-mark{
+    display: none;
+}
+
+/* ---------------------------------- */
+
+//html, body { background: #182952; }
+//body { color: rgba(255,255,255,.2); }
+//
+//.page {
+//  max-width: 30em;
+//  margin: auto;
+//  overflow: hidden;
+//}
+
+
+
+
+/* Recommended styles for Splitting */
+.splitting .word,
+.splitting .char {
+  display: inline-block;
+}
+
+/* Psuedo-element chars */
+.splitting .char {
+  position: relative;
+}
+
+/**
+ * Populate the psuedo elements with the character to allow for expanded effects
+ * Set to `display: none` by default; just add `display: block` when you want
+ * to use the psuedo elements
+ */
+.splitting .char::before,
+.splitting .char::after {
+  content: attr(data-char);
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  transition: inherit;
+  user-select: none;
+}
+
+/* Expanded CSS Variables */
+
+.splitting {
+  /* The center word index */
+  --word-center: calc((var(--word-total) - 1) / 2);
+
+  /* The center character index */
+  --char-center: calc((var(--char-total) - 1) / 2);
+
+  /* The center character index */
+  --line-center: calc((var(--line-total) - 1) / 2);
+}
+
+.splitting .word {
+  /* Pecent (0-1) of the word's position */
+  --word-percent: calc(var(--word-index) / var(--word-total));
+
+  /* Pecent (0-1) of the line's position */
+  --line-percent: calc(var(--line-index) / var(--line-total));
+}
+
+.splitting .char {
+  /* Percent (0-1) of the char's position */
+  --char-percent: calc(var(--char-index) / var(--char-total));
+
+  /* Offset from center, positive & negative */
+  --char-offset: calc(var(--char-index) - var(--char-center));
+
+  /* Absolute distance from center, only positive */
+  --distance: calc(
+     (var(--char-offset) * var(--char-offset)) / var(--char-center)
+  );
+
+  /* Distance from center where -1 is the far left, 0 is center, 1 is far right */
+  --distance-sine: calc(var(--char-offset) / var(--char-center));
+
+  /* Distance from center where 1 is far left/far right, 0 is center */
+  --distance-percent: calc((var(--distance) / var(--char-center)));
+}

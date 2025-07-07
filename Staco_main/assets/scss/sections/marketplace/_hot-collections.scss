@@ -1,0 +1,163 @@
+.hot-collections-section{
+    margin-bottom: 103px;
+    .slick-prev{
+        top: -56px;
+        background: color(whiteColor);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 25px;
+        left: auto;
+        right: 75px;
+        height: 45px;
+        width: 45px;
+        &::before{
+            font-family: inherit;
+            content: '<';
+            font-size: 26px;
+            line-height: normal;
+            background: transparent;
+            opacity: 1;
+            color: color(iconColor);
+            transition: 0.3s;
+        }
+        &:hover{
+            &::before{
+                color: #5F5FFF;
+            }
+        }
+    }
+    .slick-next{
+        top: -56px;
+        background: color(whiteColor);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 25px;
+        right: 15px;
+        height: 45px;
+        width: 45px;
+        &::before{
+            font-family: inherit;
+            content: '>';
+            font-size: 26px;
+            line-height: normal;
+            background: transparent;
+            opacity: 1;
+            color: color(iconColor);
+            transition: 0.3s;
+        }
+        &:hover{
+            &::before{
+                color: #5F5FFF;
+            }
+        }
+    }
+}
+.marketplace-title{
+    margin-bottom: 38px;
+}
+.hot-collections-card{
+    background: color(whiteColor);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    .hot-collections-img{
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+}
+.hot-collections-text{
+    padding: 0px 20px 20px 20px;
+    text-align: center;
+    margin-top: -39px;
+    .hot-collections-profile-img{
+        height: 78px;
+        width: 78px;
+        margin: auto;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 4px solid color(whiteColor);
+        position: relative;
+        z-index: 1;
+        img{
+            border-radius: 50%;
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .name{
+        color: color(title);
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 2px;
+        margin-top: 9px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            margin-left: 7px;
+        }
+    }
+    p {
+        color: color(title);
+        font-size: 12px;
+        line-height: 24px;
+        font-weight: 500;
+        margin-bottom: 0px;
+
+        &.price {
+            color: color(iconColor);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+/*-- Dark Mood --*/
+body.dark-scheme,
+html.dark-scheme body{
+    .hot-collections-card{
+        background: #181D22;
+        .hot-collections-text{
+            .hot-collections-profile-img{
+                border: 4px solid color(blackColor);
+            }    
+            .name{
+                color: color(whiteColor);
+            }
+            .price{
+                color: color(iconColor);
+            }
+            p{
+                color: color(whiteColor);
+            }
+        }
+    }
+    
+    .hot-collections-section{
+        .slick-prev{
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            &::before{
+                color: color(iconColor);
+            }
+            &:hover{
+                &::before{
+                    color: color(whiteColor);
+                }
+            }
+        } 
+        .slick-next{
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            &::before{
+                color: color(iconColor);
+            }
+            &:hover{
+                &::before{
+                    color: color(whiteColor);
+                }
+            }
+        }
+    }
+}

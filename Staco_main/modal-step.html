@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Multi-Step Modal Form</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- Smart Wizard CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/smart_wizard.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/smart_wizard_theme_dots.min.css">
+  <style>
+    /* Custom scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #f1f1f1; }
+    ::-webkit-scrollbar-thumb { background: #888; }
+    ::-webkit-scrollbar-thumb:hover { background: #555; }
+
+    body { background-color: #eee; }
+    .mt-200 { margin-top: 200px; }
+    .form-control:focus { border-color: #80bdff; box-shadow: 0 0 0 0rem rgba(0,123,255,.25); }
+    .is-invalid { border-color: #dc3545; }
+
+     /* Center wizard navigation */
+    #smartwizard .nav {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    /* Optional: ensure step circles align center */
+    .sw-toolbar {
+      justify-content: center !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row justify-content-center mt-200">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Launch Multi-Step Wizard
+      </button>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">OnlineRPL Registration</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="multiStepForm" action="/" method="post">
+            <div id="smartwizard">
+              <ul class="nav">
+                <li class="nav-item"><a class="nav-link" href="#step-1">Step 1<br><small>Qualification</small></a></li>
+                <li class="nav-item"><a class="nav-link" href="#step-2">Step 2<br><small>Reference & Visa</small></a></li>
+                <li class="nav-item"><a class="nav-link" href="#step-3">Step 3<br><small>Contact</small></a></li>
+                <li class="nav-item"><a class="nav-link" href="#step-4">Step 4<br><small>Finalize</small></a></li>
+              </ul>
+              <div>
+                <!-- Step 1 -->
+                <div id="step-1">
+                  <div class="form-group">
+                    <label for="qualification">Name of Qualification *</label>
+                    <input type="text" class="form-control" id="qualification" name="qualification" placeholder="Enter qualification" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="exp-aus">Experience in this industry in Australia (years) *</label>
+                    <select class="form-control" id="exp-aus" name="exp-aus" required>
+                      <option value="" disabled selected>Select years</option>
+                      <option>0</option><option>1</option><option>2</option>
+                      <option>3</option><option>4</option><option>5</option><option>6+</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="exp-overseas">Experience in this industry overseas (years) *</label>
+                    <select class="form-control" id="exp-overseas" name="exp-overseas" required>
+                      <option value="" disabled selected>Select years</option>
+                      <option>0</option><option>1</option><option>2</option>
+                      <option>3</option><option>4</option><option>5</option><option>6+</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- Step 2 -->
+                <div id="step-2">
+                  <div class="form-group">
+                    <label for="ref-signed">Provide signed reference? *</label>
+                    <select class="form-control" id="ref-signed" name="ref-signed" required>
+                      <option value="" disabled selected>Select an option</option>
+                      <option value="yes">Yes</option>
+                      <option value="no">No</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="visa-status">Visa Status *</label>
+                    <select class="form-control" id="visa-status" name="visa-status" required>
+                      <option value="" disabled selected>Select status</option>
+                      <option value="citizen">Citizen/Permanent Resident</option>
+                      <option value="refugee">Refugee</option>
+                      <option value="student">Student Visa</option>
+                      <option value="working-holiday">Working Holiday</option>
+                      <option value="tourist">Tourist</option>
+                      <option value="work-visa">Work Visa</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- Step 3 -->
+                <div id="step-3">
+                  <div class="form-group">
+                    <label for="user-name">Your Name *</label>
+                    <input type="text" class="form-control" id="user-name" name="user-name" placeholder="e.g. Roe Smith" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="mobile-number">Mobile Number *</label>
+                    <input type="tel" class="form-control" id="mobile-number" name="mobile-number" placeholder="e.g. +61 412 345 678" required>
+                  </div>
+                </div>
+                <!-- Step 4 -->
+                <div id="step-4">
+                  <div class="form-group">
+                    <label for="email-address">Email Address *</label>
+                    <input type="email" class="form-control" id="email-address" name="email-address" placeholder="e.g. example@mail.com" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="state">State *</label>
+                    <select class="form-control" id="state" name="state" required>
+                      <option value="" disabled selected>Select state</option>
+                      <option value="NSW">New South Wales</option>
+                      <option value="VIC">Victoria</option>
+                      <option value="QLD">Queensland</option>
+                      <option value="WA">Western Australia</option>
+                      <option value="SA">South Australia</option>
+                      <option value="TAS">Tasmania</option>
+                      <option value="ACT">Australian Capital Territory</option>
+                      <option value="NT">Northern Territory</option>
+                    </select>
+                  </div>
+                  <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="tnc" name="tnc" required>
+                    <label class="form-check-label" for="tnc">
+                      I have read and agree to be bound by the terms and conditions of OnlineRPL! *
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/jquery.smartWizard.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      var form = $('#multiStepForm');
+      var totalSteps = $('#smartwizard').smartWizard('getStepCount');
+
+      $('#smartwizard').smartWizard({
+        selected: 0,
+        theme: 'dots',
+        autoAdjustHeight: true,
+        transitionEffect: 'fade',
+        showStepURLhash: false
+      });
+
+      // Validate before moving to next step
+      $('#smartwizard').on('leaveStep', function(e, anchorObject, stepIndex, stepDirection) {
+        var stepId = '#step-' + (stepIndex + 1);
+        var inputs = $(stepId).find('input, select');
+        var valid = true;
+        inputs.each(function() {
+          if (!this.checkValidity()) {
+            valid = false;
+            $(this).addClass('is-invalid');
+          } else {
+            $(this).removeClass('is-invalid');
+          }
+        });
+        return valid; // return false to stay on step
+      });
+
+      // Change Next to Submit on last step
+      $('#smartwizard').on('showStep', function(e, anchorObject, stepIndex, stepDirection) {
+        var nextBtn = $('.sw-btn-next');
+        if (stepIndex === totalSteps - 1) {
+          nextBtn.text('Submit');
+          nextBtn.off('click').on('click', function() {
+            form.submit();
+          });
+        } else {
+          nextBtn.text('Next');
+          nextBtn.off('click').on('click', function() {
+            $('#smartwizard').smartWizard('next');
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

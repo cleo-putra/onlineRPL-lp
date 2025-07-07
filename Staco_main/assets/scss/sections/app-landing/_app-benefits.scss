@@ -1,0 +1,30 @@
+.app-benefits-section{
+    padding: 132px 0px;
+}
+.app-benefits-card{
+    margin-bottom: 30px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.app-benefits-card-img{
+    margin-bottom: 43px;
+    padding: 60px 20px 0px 20px;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    &.account{
+        background: #EEEFFB;
+    }
+    &.plan{
+        background: #F8F0E6;
+    }
+    &.team{
+        background: #F6EAFE;
+    }
+}
+.app-benefits-card-text{
+    padding: 0px 30px;
+    h5{
+        margin-bottom: 16px;
+    }
+}

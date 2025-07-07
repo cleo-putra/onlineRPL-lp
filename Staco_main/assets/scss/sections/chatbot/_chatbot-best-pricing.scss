@@ -1,0 +1,176 @@
+.chatbot-best-pricing-section{
+    padding-top: 132px;
+    padding-bottom: 70px;
+    background: #F7F5F2
+}
+.best-pricing{
+    &-monthly{
+        display: block;
+    }
+    &-yearly{
+        display: none;
+    }
+}
+.chatbot-best-pricing-card{
+    min-height: 100%;
+    border-radius: 30px;
+    padding: 33px 40px 40px 40px;
+    &:hover{
+        .card-header{
+            img{
+                transform: rotate(-45deg);
+            }
+        }
+    }
+    &1{
+        background: color(whiteColor);
+        .card-header{
+            p{
+                color: color(title);
+                max-width: 175px;
+                width: 100%;
+            }
+            img{
+                filter: brightness(0%);
+                transition: 0.4s;
+            }
+        }
+        .card-body {
+            h3 {
+                span {
+                    color: color(textColor);
+                }
+            }
+
+            .chatbot-best-pricing-card-btn {
+                border: 2px solid rgba(0, 149, 255, 0.3);
+                border-radius: 50px;
+                color: color(primary);
+                span{
+                    color: color(primary);
+                }
+            }
+        }
+    }
+    
+    &2{
+        background: #032368;
+        .card-header{
+            p{
+                color: color(whiteColor);
+                max-width: 219px;
+                width: 100%;
+            }
+            img{
+                transition: 0.4s;
+            }
+        }
+        .card-body {
+            h3 {
+                color: color(whiteColor);
+                span {
+                    color: color(whiteColor);
+                }
+            }
+            p{
+                color: color(whiteColor);
+            }
+
+            .chatbot-best-pricing-card-btn {
+                border: 2px solid rgba(0, 149, 255, 0.3);
+                border-radius: 50px;
+                background: color(whiteColor);
+                border: 2px solid transparent;
+                span{
+                    color: color(blackColor);
+                }
+            }
+        }
+    }
+    
+    &3{
+        background: #EDE4DB;
+        .card-header{
+            p{
+                color: color(title);
+                max-width: 232px;
+                width: 100%;
+            }
+            img{
+                filter: brightness(0%);
+                transition: 0.4s;
+            }
+        }
+        .card-body {
+            h3 {
+                span {
+                    color: color(textColor);
+                }
+            }
+
+            .chatbot-best-pricing-card-btn {
+                border: 2px solid rgba(0, 149, 255, 0.3);
+                border-radius: 50px;
+                color: color(primary);
+                span{
+                    color: color(primary);
+                }
+            }
+        }
+    }
+    
+    
+    .card-header{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 20px;
+        margin-bottom: 32px;
+        img{
+            margin-top: 15px;
+        }
+    }
+    .card-body{
+        .pricing-icon{
+            margin-bottom: 24px;
+        }
+        h3{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-bottom: 24px;
+            span{
+                font-size: 15px;
+                line-height: 30px;
+                font-weight: 500;
+                margin-left: 8px;
+                font-family: fontfamily(dmSans) !important;
+            }
+        }
+        p{
+            margin-bottom: 29px;
+        }
+        .chatbot-best-pricing-card-btn {
+            width: 100%;
+            padding: 17px;
+            font-size: 15px;
+            line-height: 26px;
+            font-weight: 700;
+            border-radius: 50px;
+            color: color(primary);
+            width: 100%;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            z-index: 0;
+//            @include btnInnerStyle();
+            &:hover,
+            &:focus {
+//            @include hoverBtnInnerStyle();
+            }
+        }
+    }
+}

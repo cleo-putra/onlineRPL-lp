@@ -1,0 +1,72 @@
+.latest-articles-section{
+    padding-bottom: 140px;
+}
+.latest-articles-content{
+    padding-bottom: 20px;
+}
+.latest-articles-card{
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    .articles-img{
+        img{
+            width: 100%;
+        }
+    }
+    .latest-articles-text{
+        padding: 30px;
+        p{
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 0px;
+        }
+        h4{
+            margin-top: 11px;
+            margin-bottom: 42px;
+            color: color(whiteColor);
+        }
+        .articles-footer{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            p{
+                color: rgba(255, 255, 255, 0.5);
+            }
+            a{
+                opacity: 0.5;
+                transition: 0.3s;
+                &:hover{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.defi-explore-article-btn{
+    padding: 15px 51px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 270px;
+    width: 100%;
+    margin: auto;
+    color: color(whiteColor);
+    position: relative;
+    overflow: hidden;
+    img{
+        margin-left: 14px;
+        filter: brightness(100);
+        transition: 0.3s;
+    }
+    &:hover{
+        color: color(whiteColor);
+        img{
+            transform: rotate(-45deg);
+        }
+    }
+}

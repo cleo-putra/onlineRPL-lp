@@ -1,0 +1,38 @@
+.crypto-token-social{
+    padding: 140px 0px;
+}
+.crypto-social-list{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0px -15px;
+    .crypto-social-link{
+        padding: 0xp 15px;
+        width: 20%;
+    }
+}
+.crypto-social-btn{
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 30px;
+    height: 210px;
+    max-width: 210px;
+    width: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+//    flex: 1;
+//    white-space: nowrap;
+//    cursor: pointer;
+//    user-select: none;
+//    background-image: url(https://web.archive.org/web/20160312084140im_/http://splatoon.nintendo.com/assets/img/nav-bg-fill-blue.png?1443460871);
+//    background-repeat: repeat-x;
+//    background-position: 0 -100%;
+//    background-size: cover;
+//    transition: 1.5s ease;
+    
+    &:hover{
+//        background-position: 500% 100%;
+    }
+}

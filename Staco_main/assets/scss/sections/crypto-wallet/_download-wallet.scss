@@ -1,0 +1,78 @@
+.download-wallet-section{
+    background: url(../images/crypto/download-wallet-bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .download-wallet-overlay{
+        background: rgba(16, 23, 34, 0.5);
+        padding-top: 131px;
+        padding-bottom: 140px;
+        height: 100%;
+    }
+}
+.download-wallet-btns{
+    max-width: 410px;
+    width: 100%;
+    text-align: center;
+    margin-right: auto;
+    margin-top: 48px;
+    position: relative;
+    z-index: 3;
+    a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(5px);
+        border-radius: 15px;
+        padding: 7px 24px;
+        max-width: 190px;
+        width: 190px;
+        margin: auto;
+        h5{
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            margin-left: 10px;
+            font-weight: 700;
+            margin-bottom: 0px;
+            color: #FFFFFF;
+            span{
+                font-size: 12px;
+                font-weight: 500;
+            }
+        }
+    }
+}
+.os-btns{
+    max-width: 260px;
+    max-height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    .os-btn{
+        border: 2px solid rgba(255, 255, 255, 0.05);
+        border-radius: 30px;
+        padding: 10px;
+        min-height: 129px;
+        min-width: 129px;
+        max-height: 129px;
+        max-width: 129px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        .os-btn-inner{
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 85%;
+            width: 85%;
+            position: absolute;
+        }
+    }
+}

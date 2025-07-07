@@ -1,0 +1,186 @@
+.app-convert-visitors-section{
+    padding-top: 84px;
+}
+.star-free-btn{
+    border: 2px solid rgba(0, 149, 255, 0.3);
+    border-radius: 50px;
+    padding: 17px 52px;
+    transition: 0.3s;
+    font-weight: 700;
+    color: color(primary);
+    svg{
+        margin-left: 10px;
+        transition: 0.3s;
+        font-size: 24px;
+    }
+    &:hover{
+        color: color(primary);
+        svg{
+            transform: rotate(-45deg);
+        }
+    }
+}
+.app-convert-visitors-nav {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 100%;
+    flex-direction: column;
+    .slick-track{
+        display: flex;
+        flex-direction: column;
+        transform: none !important;
+    }
+    .app-nav-list {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        .nav-item {
+            padding-top: 19px;
+            padding-bottom: 19px;
+            position: relative;
+            border: none;
+            padding-left: 38px;
+            max-width: max-content !important;
+            width: 100% !important;
+            .tab-btn{
+                font-weight: 700;
+                line-height: 24px;
+                text-transform: uppercase;
+                span{
+                    display: block;
+                }
+                &::before{
+                    content: '';
+                    height: 8px;
+                    width: 8px;
+                    background: #E6E6E6;
+                    border-radius: 50%;
+                    position: absolute;
+                    left: 15px;
+                    top: 30px;
+                }
+            }
+            &.swiper-slide-thumb-active {
+                color: color(primary);
+                background: transparent;
+                &::before {
+                    content: '';
+                    height: 54px;
+                    width: 4px;
+                    background: #E6E6E6;
+                    border-radius: 2px;
+                    position: absolute;
+                    left: 0px;
+                    top: 8px;
+                }
+                &::after {
+                    content: '';
+                    height: 0%;
+                    width: 4px;
+                    background: color(primary);
+                    border-radius: 2px;
+                    position: absolute;
+                    left: 0px;
+                    top: 8px;
+                    animation: progressHeight 4s linear infinite;
+                    -webkit-animation: progressHeight 4s linear infinite;
+                }
+                .tab-btn {
+                    &::before {
+                        background: color(primary);
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+.convert-visitors-slider-right{
+    
+    .slide-item{
+        background: color(whiteColor);
+    }
+    
+    .convert-visitors-text{
+        .section-title{
+            margin-bottom: 35px;
+        }
+    }
+}
+
+.protect-data-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    .protect-data-content{
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        .protect-data-img{
+            min-height: 50px;
+            min-width: 50px;
+            max-height: 50px;
+            max-width: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: color(whiteColor);
+            border: 1px solid rgba(0, 149, 255, 0.3);
+            border-radius: 10px;
+        }
+        .protect-data-text{
+            max-width: 131px;
+            p{
+                color: color(title);
+                margin-bottom: 0px;
+            }
+        }
+    }
+    
+}
+
+
+
+@keyframes progressHeight {
+    from {
+        height: 0%;
+    }
+
+    to {
+        height: 100%;
+    }
+}
+@-webkit-keyframes progressHeight {
+    from {
+        height: 0%;
+    }
+
+    to {
+        height: 100%;
+    }
+}
+@keyframes progressWidth {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+@-webkit-keyframes progressWidth {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+

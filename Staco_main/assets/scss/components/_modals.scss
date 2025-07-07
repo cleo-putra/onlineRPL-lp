@@ -1,0 +1,212 @@
+.staco-modals{
+    .modal{
+        z-index: 1111;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    .modal-content{
+        max-width: 450px;
+        width: 100%;
+        overflow: hidden;
+        margin: auto;
+        padding: 35px 30px;
+        background: #FFFFFF;
+        border-radius: 15px;
+        .modal-header{
+            padding: 0px;
+            border: none;
+            margin-bottom: 27px;
+        }
+        .modal-body{
+            padding: 0px;
+            .modal-pragraph{
+                font-size: 14px;
+                line-height: 28px;
+                span{
+                    color: color(title);
+                    font-weight: 600;
+                }
+            }
+            .connect-section{
+                margin-top: 36px;
+                padding-bottom: 4px;
+                ul{
+                    list-style: none;
+                    padding: 0px;
+                    margin-bottom: 0px;
+                    li{
+                        background: #F1F1F1;
+                        border-radius: 30px;
+                        width: 100%;
+                        transition: 0.3s;
+                        margin-bottom: 20px;
+                        position: relative;
+                        &::after{
+                            content: '>';
+                            position: absolute;
+                            right: 25px;
+                            top: 15px;
+                            font-size: 20px;
+                            color: color(iconColor);
+                        }
+                        &:hover{
+                            opacity: 0.7;
+                        }
+                        a{
+                            width: 100%;
+                            height: 60px;
+                            padding: 5px 25px;
+                            display: flex;
+                            align-items: center;
+                            font-weight: 600;
+                            font-size: 14px;
+                            sline-height: 17px;
+                            color: color(title);
+                            span{
+                                margin-right: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            .bid-section{
+                h6 {
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 17px;
+                    margin-bottom: 15px;
+                    span {
+                        margin-left: 7px;
+                        color: color(iconColor);
+                    }
+                }
+                .bid-form{
+                    overflow: hidden;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    min-height: 55px;
+                    background: #FFFFFF;
+                    border: 2px solid rgba(0, 0, 0, 0.12);
+                    border-radius: 30px;
+                    position: relative;
+                    margin-bottom: 22px;
+                    &::after {
+                        content: '>';
+                        position: absolute;
+                        top: 11px;
+                        right: 20px;
+                        font-size: 20px;
+                        transform: rotate(90deg);
+                    }
+                    input{
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 17px;
+                        color: #999999;
+                        border: none;
+                        outline: none;
+                        width: 55%;
+                        height: 100%;
+                        padding: 10px 25px;
+                    }
+                    select {
+                        width: 45%;
+                        height: 100%;
+                        padding: 16px 25px 16px 14px;
+                        border: none;
+                        outline: none;
+                        -webkit-appearance: none;
+                        border-left: 1px solid rgba(17, 17, 17, 0.12);
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 17px;
+                        color: color(title);
+                    }
+                }
+                ul{
+                    list-style: none;
+                    padding: 0px;
+                    margin-bottom: 0px;
+                    margin-bottom: 16px;
+                    li {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        p {
+                            font-weight: 600;
+                            font-size: 14px;
+                            line-height: 36px;
+                            color: color(iconColor);
+                            margin-bottom: 0px;
+                            span {
+                                color: #4157FF;
+                                font-size: 12px;
+                                line-height: 15px;
+                                padding: 3.5px 7.5px;
+                                background: rgba(65, 87, 255, 0.15);
+                                border-radius: 5px;
+                                margin-left: 8px;
+                            }
+                        }
+
+                        h5 {
+                            font-weight: 600;
+                            font-size: 14px;
+                            line-height: 36px;
+                            text-align: right;
+                            margin-bottom: 0px;
+                        }
+                    }
+                }
+                .place-bid-btn{
+                    width: 100%;
+                    height: 55px;
+                    overflow: hidden;
+                    font-weight: 700;
+                    font-size: 14px;
+                    line-height: 17px;
+                    text-align: center;
+                    color: color(whiteColor);
+                    background: #5F5FFF;
+                    border-radius: 30px;
+                }
+            }
+        }
+    }
+}
+
+
+body.dark-scheme,
+html.dark-scheme body{
+    .staco-modals{
+        .modal-content{
+            background: #181D22;
+            .modal-header {
+                .btn-close i{
+                    color: color(iconColor);
+                    &:hover{
+                        color: color(whiteColor);
+                    }
+                }
+            }
+            .modal-body {
+                .connect-section {
+                    ul {
+                        li{
+                            background: rgba(0, 0, 0, 0.3);
+                            a{
+                                color: color(iconColor);
+                                transition: 0.3s;
+                                &:hover{
+                                    color: color(whiteColor);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+}

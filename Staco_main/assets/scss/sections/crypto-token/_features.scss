@@ -1,0 +1,218 @@
+.text-with-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    font-family: fontfamily(quantico);
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 120%;
+    text-align: center;
+    color: #FFFFFF;
+    max-width: 913px;
+    text-transform: uppercase;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 110px;
+
+    .text {
+        width: max-content;
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+
+        &.add-img {
+            opacity: 50%;
+            transition: 0.3s;
+
+            &::after {
+                content: '';
+                padding: 2px 0px;
+                transition: 0.3s;
+                width: 0%;
+                background: linear-gradient(90deg, #D02EBE 0%, #BFFF0A 100%);
+                border-radius: 20px;
+                position: absolute;
+                bottom: -8px;
+                left: 0px;
+            }
+
+            img {
+                display: none;
+                margin-top: -10px;
+            }
+            &:hover {
+                opacity: 100%;
+                z-index: 2;
+
+                &::after {
+                    width: 100%;
+                }
+            }
+            span {
+                &:hover {
+                    + img {
+                        display: block;
+                        position: absolute !important;
+                        top: -70%;
+                        left: auto;
+                        min-width: 256px;
+                        z-index: -1;
+                        opacity: 1;
+                        animation: moveImg 0.5s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.crypto-token-features-cards {
+    .stack__card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 600px;
+        position: sticky;
+        top: 100px;
+        box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1), 0 -1px 2px rgba(0, 0, 0, 0.25);
+        margin-top: -20px;
+        border-radius: 30px;
+        overflow: hidden;
+        .card-bg{
+            height: 100%;
+            width: 100%;
+        }
+        .title{
+            h4{
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .stack__card:nth-child(1) {
+        background: #BFFF0A;
+        .card-bg{
+            background: url(../images/crypto-token/card-bg1.png);
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            .overlay{
+                background: linear-gradient(180deg, #BFFF0A 0%, rgba(191, 255, 10, 0.8) 35.2%, rgba(191, 255, 10, 0) 100%);
+                height: 100%;
+                padding: 80px 70px;
+                width: 100%;
+            }
+        }
+    }
+
+    .stack__card:nth-child(2) {
+        background: #FF7BCA;
+        .card-bg{
+            background: url(../images/crypto-token/card-bg2.png);
+            background-size: cover;
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 100%;
+            padding: 80px 70px;
+            
+        }
+    }
+
+    .stack__card:nth-child(3) {
+        background: #ADFFEB;
+        .card-bg{
+            background: url(../images/crypto-token/card-bg3.png);
+            background-size: cover;
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 100%;
+            padding: 80px 70px;
+        }
+    }
+}
+
+.crypto-token-features-text{
+    h2{
+        margin-bottom: 32px;
+        font-family: fontfamily(quantico);
+        font-size: 50px;
+        line-height: 120%;
+        text-transform: uppercase;
+    }
+    p{
+        margin-bottom: 0px;
+        color: color(title);
+    }
+    a{
+        color: color(title);
+        transition: 0.3s;
+        font-weight: 700;
+        img{
+            transition: 0.3s;
+            margin-left: 14px;
+        }
+        &:hover{
+            img{
+                transform: rotate(-45deg);
+            }
+        }
+    }
+    ul{
+        margin-top: 21px;
+        list-style: url(../images/crypto-token/check-black.svg);
+        li{
+            color: color(title);
+        }
+    }
+}
+
+.super-gainers-info-section{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0px -15px;
+    width: 100%;
+    padding-top: 32px;
+    .super-gainers-info{
+        width: 50%;
+        padding: 15px;
+        p{
+            text-transform: uppercase;
+            color: color(title);
+        }
+    }
+}
+
+.crypto-token-features-img{
+    position: absolute;
+    bottom: 0px;
+}
+.features-img-inner{
+    position: relative;
+    .setting-icon{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        animation: rotate360 5s linear infinite;
+        -webkit-animation: rotate360 5s linear infinite;
+    }
+}
+
+
+
+@keyframes moveImg {
+    from {
+        opacity: 0;
+    }
+    
+    to {
+        opacity: 1;
+    }
+}
+

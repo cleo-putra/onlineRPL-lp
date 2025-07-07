@@ -1,0 +1,119 @@
+.section-title {
+    p {
+        margin-bottom: 5px;
+    }
+    &.v8 {
+        p {
+            color: color(v8Title);
+            font-family: fontfamily(dmSans);
+            @include textStyle(18px, 700, 30px);
+            letter-spacing: 0.2em;
+            margin-bottom: 10px;
+        }
+        &.title2 {
+            p {
+                color: color(v8Title2);
+            }
+            h2 {
+                color: color(whiteColor);
+            }
+        }
+    }
+}
+/*-- section-title style --*/
+.section-title {
+    margin-bottom: 38px;
+    .sub-title {
+        text-transform: uppercase;
+        @include textStyle(18px, 700, 30px);
+        color: color(primary);
+        letter-spacing: 0.2em;
+        margin-bottom: 12px;
+        display: block;
+    }
+    .green-color {
+        color: color(primary6Deep);
+    }
+    .green-lite {
+        color: color(v8Title2);
+    }
+    .title {
+        line-height: 1.55;
+        .caveat{
+            font-size: 50px;
+            line-height: 50px;
+        }
+    }
+    h6 {
+        margin-top: 12px;
+    }
+    h5 {
+        font-family: fontfamily(dmSans);
+        @include textStyle(18px, 500, 26px);
+        margin-top: 12px;
+    }
+    .love-icon {
+        svg {
+            color: #f7578c;
+        }
+    }
+
+    &.crypto{
+        .sub-title{
+            color: #01FFB0;
+        }
+        .title{
+            color: color(whiteColor);
+        }
+    }
+    &.crypto2{
+        .sub-title{
+            color: #4541FE;
+        }
+        .title{
+            color: color(title);
+        }
+    }
+    &.crypto2{
+        &.title-green{
+            .sub-title{
+                color: #9FE870;
+            }
+            .title{
+                color: color(whiteColor);
+            }
+        }
+    }
+    &.corporate{
+        .sub-title{
+            color: #5ECC62;
+        }
+        .title{
+            color: color(title);
+        }
+    }
+    &.sass{
+        .sub-title{
+            color: #0555FF;
+        }
+        .title{
+            color: color(title);
+        }
+    }
+    &.defi{
+        .sub-title{
+            color: #37EA8E;
+        }
+        .title{
+            color: color(whiteColor);
+            span.liniar{
+                background: linear-gradient(90deg, #37EA8E 35.54%, #BDF93F 65.12%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+            }
+        }
+    }
+
+}

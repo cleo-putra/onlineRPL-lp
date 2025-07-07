@@ -1,0 +1,111 @@
+.v8banner-section {
+    &.chatbot-banner {
+        position: relative;
+        z-index: 1;
+        background: color(chatbotPrimary) !important;
+        background: url(../images/chatbot/chatbot-banner-grident.svg);
+        background-size: cover;
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+
+        .hero-content-list {
+            margin-top: 16px;
+
+            p {
+                margin-bottom: 13px;
+            }
+        }
+
+        .chatbot-banner-text {
+            position: relative;
+            z-index: 1;
+            min-height: 800px;
+            .title {
+                @include textStyle(60px, 700, 80px);
+                text-align: left;
+
+                span {
+                    position: relative;
+                    padding: 0px !important;
+
+                    &::after {
+                        content: '';
+                        height: 5px;
+                        border-radius: 2.5px;
+                        background: #FFC847;
+                        width: 100%;
+                        position: absolute;
+                        left: 0px;
+                        bottom: 0px;
+                    }
+
+                    img {
+                        position: absolute;
+                        top: -10px;
+                        right: -30px;
+                    }
+                }
+            }
+
+            p {
+                margin-top: 8px;
+            }
+        }
+    }
+}
+
+.chatbot-banner-video{
+    position: relative;
+    &.v8banner-video{
+        video{
+            min-height: 800px;
+        }
+    }
+    .chatbot-banner-video-overlay{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 100%;
+        background: linear-gradient(90deg, #041646 4.17%, rgba(4, 22, 70, 0.520833) 51.04%, rgba(4, 22, 70, 0) 100%);
+    }
+}
+.start-free-form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background: color(whiteColor);
+    border-radius: 35px;
+    padding: 10px;
+    max-width: 470px;
+    width: 100%;
+    max-height: 70px;
+    .form-input{
+        color: color(title);
+        background: transparent;
+        border: none;
+        outline: none;
+        padding: 14px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 26px;
+    }
+    .bg-blue-btn{
+        padding: 12px 40px;
+        border: none;
+        outline: none;
+        &:hover{
+            opacity: 0.8;
+        }
+    }
+}
+
+.banner-chat-section{
+    max-width: 460px;
+    width: 100%;
+    padding-top: 15px;
+    overflow: hidden;
+}

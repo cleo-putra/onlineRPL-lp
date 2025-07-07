@@ -1,0 +1,541 @@
+.chatbot-body{
+    position: relative;
+    z-index: 2;
+}
+.chatbot-footer-section{
+    padding-top: 90px;
+    padding-bottom: 44px;
+    background: url(../images/chatbot/chatbot-footer-bg.png);
+    background-attachment: fixed;
+    background-size: cover;
+    &.newsletter-footer{
+        background: #191C1F;
+    }   
+    &.sass-footer{
+        background: transparent;
+        padding-top: 140px;
+        position: relative;
+        .footer-bg{
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+        }
+        .shape-img1{
+            position: absolute;
+            top: 20px;
+            left: 60px;
+        }
+        .shape-img2{
+            position: absolute;
+            top: 180px;
+            left: 0px;
+        }
+    }
+}
+
+.chatbot-newslater{
+    margin-bottom: 90px;
+    h2{
+        color: color(whiteColor);
+        max-width: 518px;
+        width: 100%;
+    }
+    &-left,
+    &-right{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 120px;
+    }
+}
+.chatbot-footer-card{
+    padding: 100px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 30px;
+    margin-bottom: 60px;
+    &.newsletter{
+        background: transparent;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 80px;
+        border-radius: 0px;
+        .chatbot-footer-left{
+            margin-left: auto;
+        }
+        .chatbot-footer-right{
+            border-left: none;
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    }
+    &.crypto-wallet{
+        background: transparent;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 80px;
+        border-radius: 0px;
+        .chatbot-footer-left{
+            margin-left: auto;
+        }
+        .chatbot-footer-right{
+            border-left: none;
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    }
+    &.sass{
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+}
+.chatbot-footer-left {
+    max-width: 400px;
+    width: 100%;
+    h4{
+        margin-bottom: 20px;
+        color: color(whiteColor);
+        max-width: 270px;
+    }
+    p{
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 42px;
+    }
+    &.sass{
+        h4{
+            color: color(title);
+        }
+        p{
+            color: color(textColor);
+        }
+    }
+}
+.subscribe-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 35px;
+    padding: 10px;
+    max-width: 470px;
+    width: 100%;
+    max-height: 60px;
+    &.sass{
+        background: #FFFFFF;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 35px;
+        .form-input{
+            color: color(title);
+            &::placeholder {
+                /* Chrome, Firefox, Opera, Safari 10.1+ */
+                color: color(title);
+            }
+
+            &:-ms-input-placeholder {
+                /* Internet Explorer 10-11 */
+                color: color(title);
+            }
+
+            &::-ms-input-placeholder {
+                /* Microsoft Edge */
+                color: color(title);
+            }
+        }
+        .bg-blue-btn{
+            background: #0555FF;
+        }
+    }
+
+    .form-input {
+        color: color(whiteColor);
+        background: transparent;
+        border: none;
+        outline: none;
+        padding: 14px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 26px;
+        &::placeholder{
+            color: rgba(255, 255, 255, 0.7);
+        }
+    }
+
+    .bg-blue-btn {
+        padding: 7px 33px;
+        border: none;
+        outline: none;
+        &:hover{
+            opacity: 0.8;
+        }
+        &.gradient-bg-btn{
+            background: linear-gradient(90deg, #30D7F1 0%, #79FA4B 51.56%, #FCE344 100%);
+            color: color(title);
+        }
+    }
+}
+.chatbot-footer-right{
+    padding-left: 49px;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer-menu-list{
+    h5{
+        font-family: fontfamily(dmSans);
+        font-weight: 700;
+        text-transform: uppercase;
+        color: color(whiteColor);
+        margin-bottom: 37px;
+    }
+    ul{
+        list-style: none;
+        padding: 0px;
+        li{
+            a{
+                line-height: 36px;
+                color: rgba(255, 255, 255, 0.7);
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 5px;
+                &:hover{
+                    color: color(whiteColor);
+                }
+                span{
+                    text-transform: uppercase;
+                    color: color(whiteColor);
+                    background: #F7578C;
+                    border-radius: 10px;
+                    height: 20px;
+                    width: 60px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 13px;
+                    &.crypto-badge{
+                        background: #01FFB0;
+                        color: color(title);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.chatbot-footer-bottom-left{
+    max-width: 571px;
+    width: 100%;
+    ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        list-style: none;
+        padding: 0px;
+        margin-bottom: 22px;
+        max-width: 367px;
+        width: 100%;
+        flex-wrap: wrap;
+        li{
+            a{
+                color: rgba(255, 255, 255, 0.7);
+                &:hover{
+                    color: color(whiteColor);
+                }
+            }
+        }
+    }
+    &.sass{
+        ul{
+            li{
+                a{
+                    color: color(title);
+                }
+            }
+        }
+        p{
+            color: color(textColor);
+            font-weight: 500;
+            span{
+                color: color(title);
+                font-weight: 700;
+            }
+        }
+    }
+    p{
+        margin-bottom: 13px;
+        color: rgba(255, 255, 255, 0.5);
+        @include textStyle(13px, 400, 26px);
+        span{
+            color: #FFFFFF;
+        }
+    }
+}
+
+.chatbot-footer-bottom-right {
+    p {
+        color: color(whiteColor);
+        line-height: 36px;
+        font-weight: 600;
+        font-family: fontfamily(montserratAlternates);
+
+        a {
+            background: linear-gradient(270deg, #0095FF 0.85%, #F7578C 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            margin-left: 12px;
+        }
+    }
+    &.sass{
+        p{
+            a{
+                background: linear-gradient(270deg, #0555FF 0.85%, #F7578C 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+                margin-left: 12px;
+            }
+        }
+    }
+    &.crypto{
+        p{
+            a{
+                background: linear-gradient(90deg, #30D7F1 0%, #79FA4B 51.56%, #FCE344 100%);
+                -webkit-background-clip: text;
+                -webkit-tex-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+            }
+        }
+    }
+    
+    .chatbot-social{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 14px;
+        margin-bottom: 71px;
+        p{
+            margin-bottom: 0px;
+        }
+    }
+    .chatbot-social-list{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 193px;
+        width: 100%;
+        gap: 14px;
+        a{
+            filter: brightness(100);
+            opacity: 70%;
+            &:hover{
+                opacity: 100;
+            }
+        }
+    }
+    
+    &.sass{
+        p{
+            color: color(title);
+        }
+        .chatbot-social-list{
+            a{
+                img{
+                    filter: brightness(0);
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+}
+.crypto-footer-social{
+    p{
+        color: color(whiteColor);
+        line-height: 36px;
+        font-weight: 600;
+        font-family: fontfamily(montserratAlternates);
+        margin-bottom: 17px;
+    }
+}
+.crypto-footer-social-list{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+    a{
+        height: 60px;
+        width: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(2.5px);
+        border-radius: 15px;
+    }
+}
+
+.chatbot-footer-bottom{
+    .footer-copyright{
+        color: rgba(255, 255, 255, 0.5);
+        @include textStyle(13px, 400, 26px);
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        min-height: 48px;
+        a{
+            margin: 0px 5px;
+            &:hover{
+                color: color(whiteColor);
+            }
+        }
+        &.sass{
+            color: color(textColor);
+            font-weight: 500;
+            a{
+                &:hover{
+                    color: color(title);
+                }
+            }
+        }
+        &.crypto{
+            color: rgba(255, 255, 255, 0.7);
+        }
+    }
+    
+    .copyright-list{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 210px;
+        list-style: none;
+        padding: 0px;
+        min-height: 48px;
+        li {
+            width: 48px;
+            height: 48px;
+            overflow: hidden;
+            border-right-color: 50%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                height: 100%;
+                width: 100%;
+                position: absolute;
+            }
+        }
+    }
+}
+
+
+/*-- newsletter section --*/
+.newsletter-get-demo-section{
+    background: #0095FF;
+    border-radius: 30px;
+    overflow: hidden;
+    &.sass{
+        background: #0555FF;
+        overflow: visible;
+    }
+}
+.newsletter-get-demo-section-inner{
+    background: url(../images/newslater/newsletter-footer-bg.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: left top;
+    background-repeat: no-repeat;
+    padding-top: 54px; 
+    padding-left: 69px;
+    padding-right: 88px;
+    .newsletter-box{
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        flex-direction: column;
+        height: 100%;
+    }
+    &.sass{
+        background: url(../images/sass2/sass-footer-demo-bg.png);
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: left top;
+        background-repeat: no-repeat;
+        padding: 54px 70px;
+    }
+}
+.newsletter-get-demo-left {
+    padding-bottom: 63px;
+
+    h2 {
+        margin-bottom: 33px;
+        color: color(whiteColor);
+    }
+
+    a {
+        font-weight: 700;
+        color: color(whiteColor);
+        transition: 0.3s;
+        svg{
+            margin-left: 10px;
+            font-size: 24px;
+            transition: 0.3s;
+        }
+        &:hover{
+            svg{
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}
+
+.sass-demo-shapes{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    .shape1{
+        position: absolute;
+        right: 132px;
+        rop: 0px;
+    }
+    .shape2{
+        position: absolute;
+        top: 32px;
+        right: 0px;
+    }
+    .shape3{
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+    }
+    .shape4{
+        position: absolute;
+        top: 0px;
+        right: -100px;
+    }
+}
+
+
+.crypto-wallet-footer{
+    padding-top: 135px;
+    background: transparent !important;
+}
+
+.footer-menu-list {
+    &.sass{
+        h5{
+            color: color(title);
+        }
+        ul{
+            li{
+                a{
+                    color: color(textColor);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,126 @@
+.corporate-testiminials-section{
+    background: url(../images/corporate/testimonial-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    background-attachment: fixed;
+    .corporate-testimonial-bg{
+        position: absolute;
+        height: 150%;
+        width: 100%;
+        left: 0px;
+        top: -100px;
+        z-index: 0;
+        object-fit: cover;
+        transition: 0.3s;
+    }
+    .overlay{
+        padding-top: 140px;
+        padding-bottom: 130px;
+        background: rgba(16, 23, 34, 0.8);
+        position: relative;
+        z-index: 2;
+    }
+    
+    .slick-prev{
+        top: 60%;
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        overflow: hidden;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &::before{
+            content: url(../images/corporate/icon-prev.svg);
+            filter: brightness(100);
+        }
+        &:hover{
+            border: 2px solid #FFFFFF;
+        }
+    }
+    .slick-next{
+        top: 60%;
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        overflow: hidden;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &::before{
+            content: url(../images/corporate/icon-next.svg);
+            filter: brightness(100);
+        }
+        &:hover{
+            border: 2px solid #FFFFFF;
+        }
+    }
+}
+
+.corporate-testiminials-content{
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
+    .clint-img{
+        position: relative;
+        height: 173px;
+        width: 150px;
+        padding: 25px;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        margin: auto;
+        background: url(../images/corporate/quotes-bg.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-bottom: 42px;
+        .clint-img-inner{
+            position: relative;
+            overflow: hidden;
+            height: 100px;
+            width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            background: #FFFFFF;
+            border-radius: 50%;
+            img{
+                height: 100%;
+                width: 100%;
+                position: absolute;
+            }
+        }
+    }
+    p{
+        font-size: 18px;
+        color: color(whiteColor);
+        margin-bottom: 30px;
+    }
+    h5{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        font-family: fontfamily(dmSans);
+        color: color(whiteColor);
+        line-height: 30px;
+        margin-bottom: 0px;
+        span{
+            font-size: 15px;
+            font-weight: 500;
+            opacity: 80%;
+        }
+    }
+}

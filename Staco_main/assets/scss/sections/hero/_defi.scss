@@ -1,0 +1,203 @@
+.defi-index-bg{
+    background: #0D1014;
+    min-height: 100vh;
+}
+
+.defi-banner-section{
+    background: url(../images/defi/defi-banner-bg.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    .defi-banner-inner{
+        background: url(../images/crypto-token/grain-texture.png);
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        .overlay{
+            background: linear-gradient(180deg, #0D1014 0%, rgba(13, 16, 20, 0.7) 50.52%, #0D1014 100%);
+            padding-top: 260px;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.defi-banner-text {
+    text-align: center;
+    max-width: 813px;
+    margin: auto;
+
+    h1 {
+        margin-bottom: 30px;
+        font-size: 70px;
+        font-weight: 700;
+        line-height: 100px;
+        text-align: center;
+        color: #FFFFFF;
+        .words{
+            padding: 0px -7px;
+        }
+        .word{
+            padding: 0px 6px;
+        }
+        .animation-text {
+            padding: 0;
+            margin: 0 auto !important;
+            text-align: center;
+
+            &:after {
+                display: none;
+            }
+        }
+
+        b {
+            background: linear-gradient(90deg, #37EA8E 35.54%, #BDF93F 65.12%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            font-weight: 700;
+            margin-top: 6px;
+        }
+    }
+
+    p {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 36px;
+        text-align: center;
+        color: #FFFFFF;
+        max-width: 626px;
+        margin: auto;
+        margin-bottom: 48px;
+    }
+}
+
+.multi-chain-section{
+    margin-top: 59px;    
+    p{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 36px;
+        text-align: center;
+        color: #FFFFFF;
+        text-transform: uppercase;
+        margin-bottom: 9px;
+    }
+}
+.multi-chain-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 150px;
+    padding: 20px 0px;
+    overflow: hidden;
+}
+
+.multi-chain-list{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    &:nth-last-child(1){
+        margin-bottom: 0px;
+    }
+    &1{
+        animation: smoothSlider 32s infinite linear;
+    }
+    &2{
+        animation: smoothSlider 25s infinite linear;
+    }
+    &3{
+        animation: smoothSlider 15s infinite linear;
+    }
+    &4{
+        animation: smoothSlider 22s infinite linear;
+    }
+    ul{
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        li{
+            margin-right: 20px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: max-content;
+            .coin-img{
+                height: 30px;
+                width: 30px;
+                overflow: hidden;
+                border-radius: 50%;
+                position: relative;
+                margin-right: 9px;
+                img{
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 50%;
+                }
+            }
+            span{
+                color: rgba(255, 255, 255, 0.8);
+            }
+        }
+    }
+}
+
+.defi-banner-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+        .defi-banner-btn-shape {
+            .shape1 {
+                padding: 3.5px 0px;
+            }
+
+            .shape2 {
+                padding: 5px 0px;
+            }
+
+            .shape3 {
+                padding: 6px 0px;
+            }
+        }
+    }
+}
+.defi-banner-btn-shape{
+    margin-right: 15px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 4px;
+    .shape1{
+        width: 3px;
+        padding: 6px 0px;
+        background: #FFFFFF;
+        border-radius: 2px;
+        transition: 0.3s;
+    }
+    .shape2{
+        width: 3px;
+        padding: 3.5px 0px;
+        background: #FFFFFF;
+        border-radius: 2px;
+        transition: 0.3s;
+    }
+    .shape3{
+        width: 3px;
+        background: #FFFFFF;
+        border-radius: 2px;
+        padding: 5px 0px;
+        transition: 0.3s;
+    }
+}
