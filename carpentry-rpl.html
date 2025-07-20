@@ -215,18 +215,20 @@
         </nav>
         <!-- Canvas Menu end -->
         <!-- Breadcrumb section start -->
-        <section class="breadcrumb-section blog-details-breadcrumb-section">
-            <div class="bg-shape">
-                <div class="shape-img img-1"><img src="./assets/images/shape/breadcrumb-shape1.svg" alt="shape" /></div>
-                <div class="shape-img img-2"><img src="./assets/images/shape/breadcrumb-shape2.svg" alt="shape" /></div>
-            </div>
+         <section class="breadcrumb-section blog-details-breadcrumb-section" style="
+            background: 
+            linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+            url('./assets/images/blog/carpentry.jpg') no-repeat center/cover;
+            position: relative;
+            overflow: hidden;
+        ">    
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-12">
                         <div class="breadcrumb-content">
                             <nav aria-label="breadcrumb">
                                 <ul class="breadcrumb breadcrumb-list">
-                                    <li class="breadcrumb-item"><a href="index.html">Qualifications</a></li>
+                                    <li class="breadcrumb-item"><a href="qualification-list.html">Qualifications</a></li>
                                     
                                 </ul>
                             </nav>
@@ -371,7 +373,7 @@
                                 <span class="btn-inner">
                                     <span class="btn-normal-text">Check If You Are Eligible!</span>
                                     <span class="btn-hover-text" style="display: inline-flex;   align-items: center;       
-  justify-content: center;   flex-wrap: nowrap; white-space: nowrap;">Free 60 Second Skill Assessment</span>
+  justify-content: center;   flex-wrap: nowrap; white-space: nowrap;">Get My Instant RPL Check</span>
                                 </span>
                             </button>
                         </div>
@@ -772,13 +774,16 @@
     <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Free 60 second Skills Assessment</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Get My Instant RPL Check</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          <form id="multiStepForm" action="/" method="post">
+          <form id="multiStepForm" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="a0997844-c3db-48e3-8f4b-b9fff7bc9f18">
+            <input type="hidden" name="redirect" value="https://online-rpl-lp.vercel.app/thank-you.html" />
+                            
             <div id="smartwizard">
               <ul class="nav">
                 <li class="nav-item"><a class="nav-link" href="#step-1">Step 1<br><small>Qualification</small></a></li>
@@ -789,11 +794,20 @@
               <div>
                 <!-- Step 1 -->
                 <div id="step-1">
-                  <div class="form-group">
+                  <div class="form-group mt-4">
                     <label for="qualification">Name of Qualification *</label>
-                    <input type="text" class="form-control" id="qualification" name="qualification" placeholder="Enter qualification" required>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="qualification"
+                        name="qualification"
+                        value="Carpentry RPL"
+                        readonly
+                        placeholder="Enter qualification"
+                        required
+                    >
                   </div>
-                  <div class="form-group">
+                  <div class="form-group mt-4">
                     <label for="exp-aus">Experience in this industry in Australia (years) *</label>
                     <select class="form-control" id="exp-aus" name="exp-aus" required>
                       <option value="" disabled selected>Select years</option>
@@ -801,7 +815,7 @@
                       <option>3</option><option>4</option><option>5</option><option>6+</option>
                     </select>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group mt-4">
                     <label for="exp-overseas">Experience in this industry overseas (years) *</label>
                     <select class="form-control" id="exp-overseas" name="exp-overseas" required>
                       <option value="" disabled selected>Select years</option>
@@ -812,7 +826,7 @@
                 </div>
                 <!-- Step 2 -->
                 <div id="step-2">
-                  <div class="form-group">
+                  <div class="form-group mt-4">
                     <label for="ref-signed">Provide signed reference? *</label>
                     <select class="form-control" id="ref-signed" name="ref-signed" required>
                       <option value="" disabled selected>Select an option</option>
@@ -820,7 +834,7 @@
                       <option value="no">No</option>
                     </select>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group mt-4">
                     <label for="visa-status">Visa Status *</label>
                     <select class="form-control" id="visa-status" name="visa-status" required>
                       <option value="" disabled selected>Select status</option>
@@ -835,22 +849,22 @@
                 </div>
                 <!-- Step 3 -->
                 <div id="step-3">
-                  <div class="form-group">
+                  <div class="form-group mt-4">
                     <label for="user-name">Your Name *</label>
                     <input type="text" class="form-control" id="user-name" name="user-name" placeholder="e.g. Roe Smith" required>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group mt-4">
                     <label for="mobile-number">Mobile Number *</label>
                     <input type="tel" class="form-control" id="mobile-number" name="mobile-number" placeholder="e.g. +61 412 345 678" required>
                   </div>
                 </div>
                 <!-- Step 4 -->
                 <div id="step-4">
-                  <div class="form-group">
+                  <div class="form-group mt-4">
                     <label for="email-address">Email Address *</label>
                     <input type="email" class="form-control" id="email-address" name="email-address" placeholder="e.g. example@mail.com" required>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group mt-4">
                     <label for="state">State *</label>
                     <select class="form-control" id="state" name="state" required>
                       <option value="" disabled selected>Select state</option>
@@ -864,7 +878,7 @@
                       <option value="NT">Northern Territory</option>
                     </select>
                   </div>
-                  <div class="form-group form-check">
+                  <div class="form-group mt-4 form-check">
                     <input type="checkbox" class="form-check-input" id="tnc" name="tnc" required>
                     <label class="form-check-label" for="tnc">
                       I have read and agree to be bound by the terms and conditions of OnlineRPL! *
@@ -924,7 +938,7 @@
         <!-- custom js -->
         <script src="./assets/js/main.js"></script>
 
-          <!-- Scripts -->
+       <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/jquery.smartWizard.min.js"></script>
@@ -960,11 +974,22 @@
       // Change Next to Submit on last step
       $('#smartwizard').on('showStep', function(e, anchorObject, stepIndex, stepDirection) {
         var nextBtn = $('.sw-btn-next');
-        if (stepIndex === totalSteps - 1) {
-          nextBtn.text('Submit');
-          nextBtn.off('click').on('click', function() {
-            form.submit();
-          });
+        console.log(stepIndex, 'steps');
+        if (stepIndex ===  3) {
+        //   nextBtn.text('Submit');
+        //   nextBtn.off('click').on('click', function() {
+        //     form.submit();
+        //   });
+          nextBtn
+        .text('Submit')
+        .attr('type', 'submit')         // so browser will post the form
+        .prop('disabled', false)        // remove disabled property
+        .removeAttr('disabled')         // in case of an attribute
+        .removeClass('disabled')        // in case SmartWizard added a .disabled class
+        .off('click')
+        .on('click', function() {
+          $form.submit();
+        });
         } else {
           nextBtn.text('Next');
           nextBtn.off('click').on('click', function() {

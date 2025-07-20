@@ -54,7 +54,10 @@
           </button>
         </div>
         <div class="modal-body">
-          <form id="multiStepForm" action="/" method="post">
+          <form id="multiStepForm" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="a0997844-c3db-48e3-8f4b-b9fff7bc9f18">
+            <input type="hidden" name="redirect" value="https://online-rpl-lp.vercel.app/thank-you.html" />
+                            
             <div id="smartwizard">
               <ul class="nav">
                 <li class="nav-item"><a class="nav-link" href="#step-1">Step 1<br><small>Qualification</small></a></li>
@@ -65,11 +68,20 @@
               <div>
                 <!-- Step 1 -->
                 <div id="step-1">
-                  <div class="form-group">
+                  <div class="form-group mt-4">
                     <label for="qualification">Name of Qualification *</label>
-                    <input type="text" class="form-control" id="qualification" name="qualification" placeholder="Enter qualification" required>
+                     <input
+                        type="text"
+                        class="form-control"
+                        id="qualification"
+                        name="qualification"
+                        value=""
+                        readonly
+                        placeholder="Enter qualification"
+                        required
+                    >
                   </div>
-                  <div class="form-group">
+                  <div class="form-group mt-4">
                     <label for="exp-aus">Experience in this industry in Australia (years) *</label>
                     <select class="form-control" id="exp-aus" name="exp-aus" required>
                       <option value="" disabled selected>Select years</option>
@@ -77,7 +89,7 @@
                       <option>3</option><option>4</option><option>5</option><option>6+</option>
                     </select>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group mt-4">
                     <label for="exp-overseas">Experience in this industry overseas (years) *</label>
                     <select class="form-control" id="exp-overseas" name="exp-overseas" required>
                       <option value="" disabled selected>Select years</option>
@@ -88,7 +100,7 @@
                 </div>
                 <!-- Step 2 -->
                 <div id="step-2">
-                  <div class="form-group">
+                  <div class="form-group mt-4">
                     <label for="ref-signed">Provide signed reference? *</label>
                     <select class="form-control" id="ref-signed" name="ref-signed" required>
                       <option value="" disabled selected>Select an option</option>
@@ -96,7 +108,7 @@
                       <option value="no">No</option>
                     </select>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group mt-4">
                     <label for="visa-status">Visa Status *</label>
                     <select class="form-control" id="visa-status" name="visa-status" required>
                       <option value="" disabled selected>Select status</option>
@@ -111,22 +123,22 @@
                 </div>
                 <!-- Step 3 -->
                 <div id="step-3">
-                  <div class="form-group">
+                  <div class="form-group mt-4">
                     <label for="user-name">Your Name *</label>
                     <input type="text" class="form-control" id="user-name" name="user-name" placeholder="e.g. Roe Smith" required>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group mt-4">
                     <label for="mobile-number">Mobile Number *</label>
                     <input type="tel" class="form-control" id="mobile-number" name="mobile-number" placeholder="e.g. +61 412 345 678" required>
                   </div>
                 </div>
                 <!-- Step 4 -->
                 <div id="step-4">
-                  <div class="form-group">
+                  <div class="form-group mt-4">
                     <label for="email-address">Email Address *</label>
                     <input type="email" class="form-control" id="email-address" name="email-address" placeholder="e.g. example@mail.com" required>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group mt-4">
                     <label for="state">State *</label>
                     <select class="form-control" id="state" name="state" required>
                       <option value="" disabled selected>Select state</option>
@@ -140,7 +152,7 @@
                       <option value="NT">Northern Territory</option>
                     </select>
                   </div>
-                  <div class="form-group form-check">
+                  <div class="form-group mt-4 form-check">
                     <input type="checkbox" class="form-check-input" id="tnc" name="tnc" required>
                     <label class="form-check-label" for="tnc">
                       I have read and agree to be bound by the terms and conditions of OnlineRPL! *
