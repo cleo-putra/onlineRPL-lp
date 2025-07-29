@@ -765,8 +765,10 @@
         </div>
         <div class="modal-body">
           <form id="multiStepForm" action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="a0997844-c3db-48e3-8f4b-b9fff7bc9f18">
-            <input type="hidden" name="redirect" value="https://online-rpl-lp.vercel.app/thank-you.html" />
+            <input type="hidden" name="access_key" value="08eba559-3c31-48fb-ac4e-5a285ecb31fb">
+            <!-- <input type="hidden" name="redirect" value="https://online-rpl-lp.vercel.app/thank-you.html" /> -->
+            <input type="hidden" name="redirect" value="https://online-rpl-lp.vercel.app/index.html" />
+            <input type="hidden" name="eligibility" id="eligibility" value="" />
                             
             <div id="smartwizard">
               <ul class="nav">
@@ -868,6 +870,19 @@
                       I have read and agree to be bound by the terms and conditions of OnlineRPL! *
                     </label>
                   </div>
+
+                  <div class="form-group mt-4 text-center">
+                    <button type="submit" id="customSubmit" class="btn btn-primary" style="display:none;  background: #5F5FFF;
+                        border-radius: 25px;
+                        padding: 13.5px 20px;
+                        color: #ffffff;
+                        line-height: 16px;
+                        font-weight: 700;
+                        -webkit-transition: 0.3s;
+                        transition: 0.3s;">
+                            Submit
+                        </button>
+                    </div>
                 </div>
               </div>
             </div>
@@ -877,7 +892,7 @@
     </div>
   </div>
 
-        <!-- All javascript files included here -->
+         <!-- All javascript files included here -->
         <!-- jQuery v3.6.1 js -->
         <script src="./assets/js/jquery-3.6.1.min.js"></script>
         <!-- popper v2.11.6 js -->
@@ -926,89 +941,78 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/jquery.smartWizard.min.js"></script>
+
+
   <script>
-    $(document).ready(function() {
-      var form = $('#multiStepForm');
-      var totalSteps = $('#smartwizard').smartWizard('getStepCount');
+$(function(){
+  var $form   = $('#multiStepForm');
+  var $wizard = $('#smartwizard');
+  var $btnNext    = null;
+  var $btnPrev = null;
+  var $btnSubmit  = $('#customSubmit');
+   var nextBtn = $('.sw-btn-next');
 
-      $('#smartwizard').smartWizard({
-        selected: 0,
-        theme: 'dots',
-        autoAdjustHeight: true,
-        transitionEffect: 'fade',
-        showStepURLhash: false
-      });
+  // 1) Init SmartWizard
+  $wizard.smartWizard({
+    selected: 0,
+    theme: 'dots',
+    autoAdjustHeight: true,
+    transitionEffect: 'fade',
+    showStepURLhash: false
+  });
 
-      // Validate before moving to next step
-      $('#smartwizard').on('leaveStep', function(e, anchorObject, stepIndex, stepDirection) {
-        var stepId = '#step-' + (stepIndex + 1);
-        var inputs = $(stepId).find('input, select');
-        var valid = true;
-        inputs.each(function() {
-          if (!this.checkValidity()) {
-            valid = false;
-            $(this).addClass('is-invalid');
-          } else {
-            $(this).removeClass('is-invalid');
-          }
-        });
-        return valid; // return false to stay on step
-      });
+  // grab the Next button after init
+  $btnNext = $wizard.find('.sw-btn-next');
+  $btnPrev = $wizard.find('.sw-btn-prev');
 
-      // Change Next to Submit on last step
-      $('#smartwizard').on('showStep', function(e, anchorObject, stepIndex, stepDirection) {
-        var nextBtn = $('.sw-btn-next');
-        console.log(stepIndex, 'steps');
-        if (stepIndex ===  3) {
-        //   nextBtn.text('Submit');
-        //   nextBtn.off('click').on('click', function() {
-        //     form.submit();
-        //   });
-          nextBtn
-        .text('Submit')
-        .attr('type', 'submit')         // so browser will post the form
-        .prop('disabled', false)        // remove disabled property
-        .removeAttr('disabled')         // in case of an attribute
-        .removeClass('disabled')        // in case SmartWizard added a .disabled class
-        .off('click')
-        .on('click', function() {
-          $form.submit();
-        });
-        } else {
-          nextBtn.text('Next');
-          nextBtn.off('click').on('click', function() {
-            $('#smartwizard').smartWizard('next');
-          });
-        }
-      });
+  // 2) Validation before leaving each step
+  $wizard.on('leaveStep', function(e, anchorObject, stepIndex, stepDirection) {
+    var $step = $('#step-' + (stepIndex + 1));
+    var valid = true;
+    $step.find('input, select').each(function() {
+      if (!this.checkValidity()) {
+        valid = false;
+        $(this).addClass('is-invalid');
+      } else {
+        $(this).removeClass('is-invalid');
+      }
     });
-  </script>
+    return valid;
+  });
 
-   <script>
-        $(document).ready(function() {
-            $('#smartwizard').smartWizard({
-                // wizard options
-            }).on("leaveStep", function(e, anchorObject, currentStepIndex, nextStepIndex, stepDirection) {
-                // validation logic
-            }).on("showStep", function(e, anchorObject, stepIndex, stepDirection, stepPosition) {
-                // step shown logic
-            });
-        });
-        </script>
+  // 3) showStep → hide Next & show customSubmit on last step
+  $wizard.on('showStep', function(e, anchorObject, stepIndex) {
+    var total = $wizard.smartWizard('getStepCount');
+    
+    if (stepIndex === 3) {
+      // last step
+      $btnNext.hide();
+      $btnPrev.hide();
+      $btnSubmit.show();
+    } else {
+      // any other step
+      $btnNext.show().text('Next');
+      $btnSubmit.hide();
+    }
+  });
 
-        <!-- Script to load the modal from external file and show it -->
-        <script>
-        $(document).ready(function(){
-            $('#btnModal').on('click', function(e){
-                e.preventDefault();
-                // Load only the modal markup (#exampleModal) into the container
-                $('#modalContainer').load('modal-step.html #exampleModal', function(){
-                    // After loading, initialize & display the modal
-                    $('#exampleModal').modal('show');
-                });
-            });
-        });
-        </script>
+  // 4) On form-submit, swap redirect based on exp-aus
+ $form.on('submit', function(){
+  var expStr = $('#exp-aus').val();           // e.g. "0", "1", "2", "3", … or "6+"
+  var years  = parseInt(expStr, 10) || 0;     // parseInt("6+") → 6; fallback to 0 if NaN
+  
+      $('#eligibility').val(years < 2 ? 'ineligible' : 'eligible');
+
+  var url    = (years < 2)
+    ? 'https://online-rpl-lp.vercel.app/thank-you.html'
+    : 'https://online-rpl-lp.vercel.app/index.html';
+  $form.find('input[name="redirect"]').val(url);
+});
+  
+});
+</script>
+
+
   
         
     </body>
