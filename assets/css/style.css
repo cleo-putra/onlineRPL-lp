@@ -12908,7 +12908,9 @@ html.dark-scheme body .footer-dropdown select option {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-      grid-template-areas: "item1 item1" "item2 item3" "item4 item4";
+      grid-template-areas: "item1 item1"
+ "item2 item3"
+ "item4 item4";
   gap: 20px;
 }
 
